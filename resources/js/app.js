@@ -2,6 +2,7 @@ import { InertiaApp } from '@inertiajs/inertia-vue'
 import Vue from 'vue'
 import Vuetify from '../plugins/vuetify';
 
+
 Vue.prototype.$route = (...args) => route(...args).url()
 Vue.use(InertiaApp)
 
@@ -16,6 +17,3 @@ new Vue({
         },
     }),
 }).$mount(app)
-
-
-

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 use Inertia\Inertia;
 
 /*
@@ -19,3 +20,19 @@ Route::get('/', function () {
         'page' => 'Home'
     ]);
 });
+
+Route::get('/login', function () {
+    return Inertia::render('Auth/Login', [
+        'page' => 'Home'
+    ]);
+});
+// Route::get('/login', [
+//     'as' => 'login.show',
+//     'uses' => 'Auth\LoginController@show',
+// ]);
+
+// Route::post('/login', [
+//     'as' => 'login.attempt',
+//     'uses' => 'Auth\LoginController@login',
+// ]);
+
